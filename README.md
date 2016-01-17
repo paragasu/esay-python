@@ -1,2 +1,2 @@
-# esay-python
+# sangai-python
 Generate random password using passphrase
