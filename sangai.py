@@ -15,4 +15,4 @@ key = getpass.getpass()
 len = int(args.length)
 str = hashlib.sha512(key + args.hint[0]).hexdigest()[:len];
 
-print str
+print (str)
