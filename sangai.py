@@ -11,8 +11,8 @@ argparser.add_argument('-l', dest="length", help="Generated password length", de
 argparser.add_argument('hint', nargs='*')
 args = argparser.parse_args()
 
-key = getpass.getpass()
+key = getpass.getpass() + args.hint[0];
 len = int(args.length)
-str = hashlib.sha512(key + args.hint[0]).hexdigest()[:len];
+str = hashlib.sha512(str(key).encode("utf-8")).hexdigest()[:len];
 
 print (str)
